@@ -54,6 +54,7 @@ public abstract class DessertItem implements Comparable{
   }
   
  //TODO: create max() method
+ //TODO: sort ArrayList
 }
 
 
