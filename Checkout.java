@@ -1,3 +1,11 @@
+/*   Brandon Nhem
+     Anthony Pham
+     September 25, 2019
+     Purpose: This is the Checkout class. This class handles all the items in an ArrayList and prints out a receipt for the user.
+     Inputs: enterItem(), setTaxRate()
+     Outputs: numberOfItems(), getTax(), getTaxRate(), toString(), totalTax(), totalCost()
+*/
+
 package inheritance;
 
 import java.util.ArrayList;
@@ -20,28 +28,12 @@ public class Checkout{
 	}
 	
 	/**
-	 * Sorts the ArrayList through a bubble sort method
+	 * Sorts the ArrayList through Collections method by overriding the compareTo method in the DessertItem class
 	 */
 	
 	public void sort()
 	{
-		
-		/**
-		 * WARNING! THIS METHOD IS BROKEN.
-		 */
-		for(int i = 0; i < items.size() - 1; i++)
-		{
-			for(int j = 0; j < items.size() - i - 1; j++)
-			{
-				if(items.get(j).compareTo(items.get(j + 1)) == 1)
-				{
-					DessertItem temp = items.get(j);
-//					DessertItem temp2 = items.get(j + 1);
-					items.set(j, items.get(j + 1));
-					items.set(j + 1, temp);
-				}
-			}
-		}
+		Collections.sort(items);
 	}
 	
 	/**
@@ -82,6 +74,7 @@ public class Checkout{
 	
 	public void display()
 	{
+		System.out.println("");
 		for (int i = 0; i < items.size() - 1; i++)
 		{
 			System.out.println(items.get(i).getName() + "\n");
@@ -97,7 +90,7 @@ public class Checkout{
 	{		
 		String receipt = "\n\t------ Dessert Shop ------\n";
 		receipt += "\n\tNumber of items: " + numberOfItems() + "\n\tYou ordered: \n";
-		for (int i = 0; i < items.size() - 1; i++)
+		for (int i = 0; i <= items.size() - 1; i++)
 		{
 			receipt += "\n";
 			receipt += items.get(i).getReceipt();

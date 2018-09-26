@@ -1,3 +1,11 @@
+/*   Brandon Nhem
+     Anthony Pham
+     September 25, 2019
+     Purpose: This is the DessertItem class that is extended for the Candy, Cookie, IceCream, and Sundae Class
+     Inputs: setCalorie()
+     Outputs: compareTo(), max(), getCost(), getCalorie()
+*/
+
 package inheritance;
 
 public class Sundae extends IceCream {

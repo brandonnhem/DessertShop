@@ -1,3 +1,11 @@
+/*   Brandon Nhem
+     Anthony Pham
+     September 25, 2019
+     Purpose: This is the Candy class, set the price of the candy, weight, and calories. 
+     Inputs: setCalorie()
+     Outputs: getCost(), getCalorie(), getReceipt(), toString()
+*/
+
 package inheritance;
 
 public class Candy extends DessertItem{

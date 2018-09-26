@@ -1,3 +1,11 @@
+/*   Brandon Nhem
+     Anthony Pham
+     September 25, 2019
+     Purpose: This is the DessertItemMain class, it allows you to set up a register and add DessertItems to that register. In the end, it allows you to print out a receipt on the console.
+     Inputs: n/a
+     Outputs: n/a
+*/
+
 package inheritance;
 
 public class DessertItemMain {
@@ -22,10 +30,10 @@ public class DessertItemMain {
 		peanutButter.setCalorie(250);
 		split.setCalorie(700);
 		
-		System.out.println("\ncompareTo sample: Fudge v. Reeses\n");
+		System.out.println("\ncompareTo sample (price): Fudge v. Reeses\n");
 		System.out.println("The larger item is..");
 		System.out.println(DessertItem.max(fudge, reeses));
-		System.out.println("\ncompareTo sample: Fudge v. Chocolate Chip Cookies\n");
+		System.out.println("\ncompareTo sample (price): Fudge v. Chocolate Chip Cookies\n");
 		System.out.println("The larger item is..");
 		System.out.println(DessertItem.max(fudge, chocolateChip));
 		

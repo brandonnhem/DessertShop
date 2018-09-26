@@ -1,3 +1,11 @@
+/*   Brandon Nhem
+     Anthony Pham
+     September 25, 2019
+     Purpose: This is the Cookie class, set the price, amount, and calories for the type of Cookie
+     Inputs: setCalorie()
+     Outputs: getCost(), getCalorie(), getReceipt(), toString()
+*/
+
 package inheritance;
 
 public class Cookie extends DessertItem {
