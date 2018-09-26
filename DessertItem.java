@@ -31,10 +31,9 @@ public abstract class DessertItem implements Comparable{
   
   public abstract String getReceipt();
   
-  public interface Comparable
-  {
-	  int compareTo(Object otherObject);
-  }
+  public abstract void setCalorie(int calorie);
+  
+  public abstract int getCalorie();
   
   public int compareTo(Object otherObject)
   {
@@ -54,6 +53,22 @@ public abstract class DessertItem implements Comparable{
   }
   
  //TODO: create max() method
+  
+  public static DessertItem max(DessertItem firstDessert, DessertItem secondDessert)
+  {
+	  if(firstDessert.compareTo(secondDessert) == 1)
+	  {
+		  return firstDessert;
+	  }
+	  else if(firstDessert.compareTo(secondDessert) == -1)
+	  {
+		  return secondDessert;
+	  }
+	  else
+	  {
+		  return firstDessert;
+	  }
+  }
  //TODO: sort ArrayList
 }
 

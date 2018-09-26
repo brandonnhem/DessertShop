@@ -11,12 +11,25 @@ public class Sundae extends IceCream {
 	private String toppingName;
 	private int calorie;
 	
+	/**
+	 * The constructor for the Sundae class which extends the IceCream class. The difference between the two is the Sundae class
+	 * comes with toppings. 
+	 * @param name Name of the Sundae
+	 * @param price Price for the Sundae
+	 * @param topping Name of the toppings that go on the Sundae
+	 */
+	
 	public Sundae(String name, double price, String topping)
 	{
 		super(name, price);
 		this.price = price;
 		this.toppingName = topping;
 	}
+	
+	/**
+	 * Determines the cost of the Sundae depending on which toppings are selected.
+	 * @return cost The cost of the Sundae with the topping
+	 */
 	
 	public double getCost()
 	{
@@ -44,26 +57,51 @@ public class Sundae extends IceCream {
 		return cost;
 	}
 	
+	/**
+	 * Sets the calorie for the Sundae
+	 * @param calorie How much calories to set for the Sundae
+	 */
+	
 	public void setCalorie(int calorie)
 	{
 		this.calorie = calorie;
 	}
+	
+	/**
+	 * Gets how many calories the Sundae has
+	 * @return calorie How many calories the Sundae has
+	 */
 	
 	public int getCalorie()
 	{
 		return calorie;
 	}
 	
+	/**
+	 * Provides the name of the toppings as a string
+	 * @return toppingName The name of the toppings
+	 */
+	
 	public String getToppingsName()
 	{
-		return " Sundae with " + toppingName;
+		return toppingName;
 	}
+	
+	/**
+	 * One receipt line for the Sundae including the topping with proper formatting
+	 * @return receipt The line for one order of the Sundae with the toppings
+	 */
 	
 	public String getReceipt()
 	{
 		String receipt = ">>\t" + getName() + " Sundae with " + toppingName + "\t$" + getCost() + "\n";
 		return receipt;
 	}
+	
+	/**
+	 * A string for the DessertItem
+	 * @return item The string printed out of the Sundae
+	 */
 	
 	public String toString()
 	{
